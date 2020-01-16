@@ -2,6 +2,8 @@
 
 
 #include "SequencePuzzle.h"
+#include "SequencePuzzleButton.h"
+
 
 // Sets default values
 ASequencePuzzle::ASequencePuzzle()
@@ -15,6 +17,12 @@ ASequencePuzzle::ASequencePuzzle()
 void ASequencePuzzle::BeginPlay()
 {
 	Super::BeginPlay();
+	UWorld* World = GetWorld();
+	if (World)
+	{
+		World->SpawnActor<ASequencePuzzleButton>(ButtonClass, GetTransform());
+	}
+
 	
 }
 

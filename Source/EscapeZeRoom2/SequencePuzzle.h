@@ -6,6 +6,8 @@
 #include "GameFramework/Actor.h"
 #include "SequencePuzzle.generated.h"
 
+class ASequencePuzzleButton;
+
 UCLASS()
 class ESCAPEZEROOM2_API ASequencePuzzle : public AActor
 {
@@ -22,5 +24,5 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	TSubclassOf<ASequencePuzzleButton> ButtonClass;
 };
