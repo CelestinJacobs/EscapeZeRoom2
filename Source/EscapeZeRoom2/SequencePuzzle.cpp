@@ -17,6 +17,7 @@ ASequencePuzzle::ASequencePuzzle()
 void ASequencePuzzle::BeginPlay()
 {
 	Super::BeginPlay();
+
 	UWorld* World = GetWorld();
 	if (World)
 	{
